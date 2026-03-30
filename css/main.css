@@ -1,3 +1,7 @@
+.hidden {
+  display: none !important;
+}
+
 .interaction {
   padding: 4rem 0;
   background-color: #f4f7f6;
@@ -134,7 +138,7 @@
 .footer {
   background-color: #2c3e50;
   color: #ffffff;
-  padding: 2rem 0;
+  padding: 2rem;
   margin-top: 4rem;
 }
 .footer__grid {
@@ -179,6 +183,43 @@
 }
 .btn--submit {
   width: 100%;
+}
+
+#success-modal.modal-overlay {
+  display: none;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  z-index: 999999 !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+#success-modal.modal-overlay:not(.hidden) {
+  display: flex !important;
+}
+
+#success-modal .modal-content {
+  background: #ffffff !important;
+  padding: 30px !important;
+  border-radius: 12px !important;
+  max-width: 450px !important;
+  width: 90% !important;
+  text-align: center !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(0) !important;
+}
+#success-modal .modal-content h3 {
+  color: #004a99 !important;
+  margin-top: 0 !important;
+  font-family: sans-serif;
+}
+#success-modal .modal-content p {
+  color: #333 !important;
+  margin-bottom: 20px !important;
+  font-family: sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

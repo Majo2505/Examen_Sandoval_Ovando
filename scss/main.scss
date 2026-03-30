@@ -1,6 +1,11 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+
+.hidden {
+    display: none !important;
+}
+
 .interaction {
     padding: $space-lg 0;
     background-color: $color-bg-light;
@@ -143,7 +148,7 @@
 .footer {
     background-color: $color-text-dark;
     color: $color-white;
-    padding: $space-md 0;
+    padding: $space-md ;
     margin-top: $space-lg;
 
     &__grid {
@@ -175,5 +180,44 @@
 
     &--submit {
         width: 100%;
+    }
+}
+
+#success-modal.modal-overlay {
+    display: none; 
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    z-index: 999999 !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    &:not(.hidden) {
+        display: flex !important;
+    }
+}
+
+#success-modal .modal-content {
+    background: #ffffff !important;
+    padding: 30px !important;
+    border-radius: 12px !important;
+    max-width: 450px !important;
+    width: 90% !important;
+    text-align: center !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+    transform: translateY(0) !important;
+    
+    h3 {
+        color: #004a99 !important; // Ajusta a tu color primario
+        margin-top: 0 !important;
+        font-family: sans-serif;
+    }
+
+    p {
+        color: #333 !important;
+        margin-bottom: 20px !important;
+        font-family: sans-serif;
     }
 }

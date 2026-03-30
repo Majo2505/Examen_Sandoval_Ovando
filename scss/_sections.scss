@@ -1,5 +1,6 @@
-@use "variables";
-@use "mixins";
+@use "variables" as *;
+@use "mixins" as *;
+
 .interaction {
   padding: $space-lg 0;
   background-color: $color-bg-light;
@@ -20,15 +21,15 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr; // Móvil: 1 columna
+  grid-template-columns: 1fr;
   gap: $space-sm;
 
   @include respond-to(tablet) {
-    grid-template-columns: repeat(2, 1fr); // Tablet: 2 columnas
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @include respond-to(desktop) {
-    grid-template-columns: repeat(3, 1fr); // Desktop: 3 columnas
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -51,9 +52,13 @@
     border-radius: 20px;
     font-size: 0.8rem;
   }
+
+  // Asegurar que las tarjetas filtradas se oculten
+  &.hidden {
+    display: none !important;
+  }
 }
 
-// SECCIÓN FORMULARIO
 .contact {
   padding: $space-lg 0;
   
@@ -94,11 +99,10 @@
   &__error {
     color: $color-error;
     font-size: 0.85rem;
-    display: none; // Se activa con JS
+    display: none;
   }
 }
 
-// BOTONES (Usando el Mixin)
 .btn {
   @include button-base;
 
@@ -119,7 +123,6 @@
   }
 }
 
-// FOOTER
 .footer {
   background-color: $color-text-dark;
   color: $color-white;
