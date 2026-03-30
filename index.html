@@ -1,11 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css"> 
 </head>
+
 <body>
-    
+    <section id="interaccion" class="interaction">
+        <div class="container">
+            <h2 class="interaction__title">Explora nuestros Servicios</h2>
+
+            <div class="interaction__filters">
+                <button class="btn btn--filter active" data-category="all">Todos</button>
+                <button class="btn btn--filter" data-category="web">Desarrollo Web</button>
+                <button class="btn btn--filter" data-category="ux">Diseño UI/UX</button>
+                <button class="btn btn--filter" data-category="mkt">Marketing Digital</button>
+            </div>
+
+            <div class="interaction__status">
+                <p id="services-count">Mostrando todos los servicios</p>
+            </div>
+
+            <div id="services-grid" class="services-grid">
+                <article class="service-card" data-category="web">
+                    <h3 class="service-card__title">Landing Page</h3>
+                    <p class="service-card__description">Diseño y desarrollo de sitios de alto impacto.</p>
+                    <span class="service-card__badge">Premium</span>
+                    <button class="btn btn--primary js-view-detail">Ver detalles</button>
+                </article>
+            </div>
+        </div>
+    </section>+
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="contact_wrapper">
+                <h2 class="contact__title">Solicita una Cotización</h2>
+                <p class="contact__subtitle">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+
+                <form id="contact-form" class="form" novalidate>
+                    <div class="form__group">
+                        <label for="nombre" class="form__label">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Ej. Juan Pérez"
+                            required>
+                        <span class="form__error">El nombre es obligatorio</span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form__input" placeholder="correo@ejemplo.com"
+                            required>
+                        <span class="form__error">Introduce un correo válido</span>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="servicio" class="form__label">Servicio de Interés</label>
+                        <select id="servicio" name="servicio" class="form__select" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="web">Desarrollo Web</option>
+                            <option value="ux">Diseño UI/UX</option>
+                            <option value="mkt">Marketing Digital</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="mensaje" class="form__label">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="form__input form__input--textarea" rows="4"
+                            placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--submit">Enviar Solicitud</button>
+
+                    <div id="form-feedback" class="form__feedback hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer_grid">
+            <div class="footer_info">
+                <h3 class="footer_logo">TechSoluciones</h3>
+                <p>Impulsando la transformación digital desde Bolivia.</p>
+            </div>
+
+            <div class="footer_contact-info">
+                <h4>Contacto</h4>
+                <p>Email: noseqponer@ucb.com</p>
+                <p>Telf: +591 70000000</p>
+            </div>
+
+            <div class="footer_legal">
+                <p>&copy; 2026 Universidad Católica Boliviana - Ingeniería de Sistemas</p>
+                <p>Materia: Tecnologías Web II</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
