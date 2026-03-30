@@ -1,0 +1,5 @@
+Brandon Ovando Camacho - Estudiante 1
+encargado de realizar las tarjetas de las secciones, ademas del hero y el header
+diseño de las  tarjetas en scss
+Maria Jose Sandoval Orellana Es
+encargada de realizar el formulario y footer,encargada de las variables main, parcialmente de secciones, los mixins y diseño responsive ademas del js
